@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DateCalc (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "DateCalc (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

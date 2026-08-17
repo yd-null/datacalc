@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35507.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateCalc", "DateCalc\DateCalc.csproj", "{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateCalc.Core", "DateCalc.Core\DateCalc.Core.csproj", "{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateCalc.Core.Tests", "DateCalc.Core.Tests\DateCalc.Core.Tests.csproj", "{F08922E3-6EB6-466E-B890-08CFDD65FFB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|ARM64.Build.0 = Debug|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|x64.ActiveCfg = Debug|x64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|x64.Build.0 = Debug|x64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Debug|x64.Deploy.0 = Debug|x64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|ARM64.ActiveCfg = Release|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|ARM64.Build.0 = Release|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|ARM64.Deploy.0 = Release|ARM64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|x64.ActiveCfg = Release|x64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|x64.Build.0 = Release|x64
+		{D8A606DD-E1C6-4886-936D-AD3486EDBCBA}.Release|x64.Deploy.0 = Release|x64
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Release|ARM64.Build.0 = Release|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4F5A4D8-7B56-4D34-BC54-5E8DF988B7FC}.Release|x64.Build.0 = Release|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Debug|x64.Build.0 = Debug|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Release|ARM64.Build.0 = Release|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{F08922E3-6EB6-466E-B890-08CFDD65FFB7}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

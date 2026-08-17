@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet test DateCalc.Core.Tests/DateCalc.Core.Tests.csproj --configuration Release
+
+  windows-build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        architecture: [x64, arm64]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+      - name: Build packaged extension
+        run: dotnet build DateCalc/DateCalc.csproj --configuration Release -p:Platform=${{ matrix.architecture }}
+      - name: Build unpackaged installer
+        shell: pwsh
+        run: |
+          dotnet publish DateCalc/DateCalc.csproj `
+            --configuration Release `
+            --runtime win-${{ matrix.architecture }} `
+            --self-contained true `
+            --output publish/${{ matrix.architecture }} `
+            -p:Platform=${{ matrix.architecture }} `
+            -p:WindowsPackageType=None `
+            -p:EnableMsixTooling=false `
+            -p:PublishProfile=
+          if (-not (Test-Path "publish/${{ matrix.architecture }}/DateCalc.exe")) {
+            throw "DateCalc.exe was not published"
+          }
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" `
+            "/DArchitecture=${{ matrix.architecture }}" `
+            "/DSourceDir=publish\${{ matrix.architecture }}" `
+            installer.iss

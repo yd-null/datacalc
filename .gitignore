@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+.vs/
+AppPackages/
+Installer/
+publish/
+*.user
+*.pfx
+*.cer
+
+# These files are required for packaged deployment.
+!**/Properties/launchSettings.json
+!**/Properties/PublishProfiles/*.pubxml
